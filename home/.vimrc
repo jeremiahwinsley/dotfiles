@@ -6,19 +6,34 @@ set nobackup
 set nowb
 set noswapfile
 
-syntax enable
-color darcula
-set number
+let has_vundle=1
+if !filereadable($HOME."/.vim/bundle/Vundle.vim/README.md")
+    echo "Installing Vundle..."
+    echo ""
+    silent !mkdir -p $HOME/.vim/bundle
+    silent !git clone https://github.com/gmarik/Vundle.vim $HOME/.vim/bundle/Vundle.vim
+    let has_vundle=0
+endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Bundle 'gmarik/Vundle.vim'
+Bundle 'blueshirts/vim-colorscheme-darcula'
 
 call vundle#end()
 
+if has_vundle == 0
+    :silent! PluginInstall
+    :qa
+endif
+
 filetype indent on
 filetype plugin on
+
+syntax enable
+colo darcula
+set number
 
 set ruler
 set ai
