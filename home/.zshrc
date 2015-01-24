@@ -6,7 +6,7 @@ if [[ `uname` == 'Darwin' ]]; then
     antigen bundle osx
 fi
 
-antigen theme ssh://git@bitbucket.org/jeremiahwinsley/zsh themes/robbyrussell
+antigen theme jeremiahwinsley/zsh themes/robbyrussell
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
