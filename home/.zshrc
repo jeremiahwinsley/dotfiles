@@ -14,6 +14,7 @@ alias grep="grep --color"
 alias egrep="egrep --color"
 alias fgrep="fgrep --color"
 
+export GOPATH=$HOME/go
 
 if [ -f $HOME/.localrc ]; then
     source $HOME/.localrc
