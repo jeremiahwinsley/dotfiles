@@ -10,6 +10,11 @@ antigen theme jeremiahwinsley/zsh themes/robbyrussell
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
+alias grep="grep --color"
+alias egrep="egrep --color"
+alias fgrep="fgrep --color"
+
+
 if [ -f $HOME/.localrc ]; then
     source $HOME/.localrc
 fi

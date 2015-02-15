@@ -11,15 +11,16 @@ if !filereadable($HOME."/.vim/bundle/Vundle.vim/README.md")
     echo "Installing Vundle..."
     echo ""
     silent !mkdir -p $HOME/.vim/bundle
-    silent !git clone https://github.com/gmarik/Vundle.vim $HOME/.vim/bundle/Vundle.vim
+    silent !git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
     let has_vundle=0
 endif
 
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'gmarik/Vundle.vim'
-Bundle 'blueshirts/vim-colorscheme-darcula'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'blueshirts/vim-colorscheme-darcula'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
