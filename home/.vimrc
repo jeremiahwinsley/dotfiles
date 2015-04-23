@@ -21,6 +21,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'blueshirts/vim-colorscheme-darcula'
 Plugin 'fatih/vim-go'
+Plugin 'tangledhelix/vim-kickstart'
 
 call vundle#end()
 
