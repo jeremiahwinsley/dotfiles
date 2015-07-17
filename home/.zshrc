@@ -8,6 +8,7 @@ fi
 
 antigen theme jeremiahwinsley/zsh themes/robbyrussell
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle StackExchange/blackbox
 antigen apply
 
 alias grep="grep --color"
