@@ -5,6 +5,7 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
+set modelines=1
 
 let has_vundle=1
 if !filereadable($HOME."/.vim/bundle/Vundle.vim/README.md")
