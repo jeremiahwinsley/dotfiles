@@ -49,3 +49,9 @@ set shiftround
 set expandtab
 set nowrap
 set autoread
+
+nnoremap <C-a> ^i
+nnoremap <C-e> A
+
+inoremap <C-a> <C-O>^
+inoremap <C-e> <End>
