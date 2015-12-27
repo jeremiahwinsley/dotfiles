@@ -21,6 +21,10 @@ if [ -f $HOME/.localrc ]; then
     source $HOME/.localrc
 fi
 
+if [ -f /usr/bin/vim ]; then
+    alias vi=vim
+fi
+
 function pfix() {
 if [ -d $1 ]; then 
     find $1 -type f -exec chmod 644 {} \; 

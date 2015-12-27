@@ -1,0 +1,8 @@
+urxvt256c.background: #000000
+urxvt256c.foreground: #ffffff
+urxvt256c.font: xft:Terminus:style=regular
+urxvt256c.boldFont: xft:Terminus:style=bold
+urxvt256c.transparent: true
+urxvt256c.shading: 20
+
+
