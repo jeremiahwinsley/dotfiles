@@ -1,7 +1,7 @@
 urxvt256c.background: #000000
 urxvt256c.foreground: #ffffff
-urxvt256c.font: xft:Terminus:style=regular
-urxvt256c.boldFont: xft:Terminus:style=bold
+urxvt256c.font: xft:DejaVu Sans Mono:style=regular:size=11
+urxvt256c.boldFont: xft:DejaVu Sans Mono:style=bold:size=11
 urxvt256c.transparent: true
 urxvt256c.shading: 20
 
