@@ -27,7 +27,7 @@ if [ -f $HOME/.localrc ]; then
 fi
 
 if [[ ${ADD_PATHS:=true} ]]; then
-    export PATH="$PATH:$HOME/bin:$HOME/.gem/bin:$HOME/.composer/vendor/bin"
+    export PATH="$PATH:$HOME/bin:$HOME/.composer/vendor/bin"
 fi
 
 if [[ ${USE_GPG_SSH:=true} ]]; then
