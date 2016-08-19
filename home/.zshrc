@@ -44,7 +44,7 @@ fi
 
 if [[ ${USE_GOLANG} == true ]]; then
     export GOPATH=$HOME/go
-    export PATH="$PATH:$HOME/go"
+    export PATH="$PATH:$HOME/go/bin"
 fi
 
 function pfix() {
