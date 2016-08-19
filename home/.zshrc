@@ -21,27 +21,28 @@ alias apb="ansible-playbook -i hosts --ask-become-pass"
 alias phpunit="vendor/bin/phpunit"
 
 export GOPATH=$HOME/go
+export PATH="$PATH:$HOME/bin"
 
 if [ -f $HOME/.localrc ]; then
     source $HOME/.localrc
 fi
 
-if [[ ${ADD_PATHS:=true} ]]; then
-    export PATH="$PATH:$HOME/bin:$HOME/.composer/vendor/bin"
+if [[ ${USE_COMPOSER} == true ]]; then
+    export PATH="$PATH:$HOME/.composer/vendor/bin"
 fi
 
-if [[ ${USE_GPG_SSH:=true} ]]; then
+if [[ ${USE_GPG_SSH} == true ]]; then
     export GPG_TTY=$(tty)
     gpgconf --launch gpg-agent
     export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 fi
 
-if [[ ${USE_VIM:=true} ]]; then
+if [[ ${USE_VIM} == true ]]; then
     export EDITOR="/usr/bin/vim"
     alias vi=vim
 fi    
 
-if [[ ${USE_GOLANG:=true} ]]; then
+if [[ ${USE_GOLANG} == true ]]; then
     export GOPATH=$HOME/go
     export PATH="$PATH:$HOME/go"
 fi
