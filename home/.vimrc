@@ -6,6 +6,7 @@ set nobackup
 set nowb
 set noswapfile
 set modelines=1
+set backspace=indent,eol,start
 
 let has_vundle=1
 if !filereadable($HOME."/.vim/bundle/Vundle.vim/README.md")
