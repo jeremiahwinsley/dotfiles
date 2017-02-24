@@ -18,7 +18,6 @@ alias fgrep="fgrep --color"
 
 alias ap="ansible-playbook -i hosts"
 alias apb="ansible-playbook -i hosts --ask-become-pass"
-alias phpunit="vendor/bin/phpunit"
 
 export GOPATH=$HOME/go
 export PATH="$PATH:$HOME/bin"
