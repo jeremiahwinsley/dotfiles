@@ -7,9 +7,8 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 
 antigen theme jeremiahwinsley/zsh themes/robbyrussell
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions src
-antigen bundle StackExchange/blackbox
+antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 alias grep="grep --color"
