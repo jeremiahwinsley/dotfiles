@@ -31,7 +31,7 @@ fi
 
 if [[ ${USE_GPG_SSH} == true ]]; then
     export GPG_TTY=$(tty)
-    gpgconf --launch gpg-agent
+    gpg-connect-agent /bye
     export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 fi
 
