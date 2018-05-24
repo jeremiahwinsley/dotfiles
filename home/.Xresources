@@ -1,7 +1,0 @@
-URxvt*.termName: xterm-256color
-URxvt*.background: #000000
-URxvt*.foreground: #ffffff
-URxvt*.font: xft:mono:style=regular:size=10
-URxvt*.boldFont: xft:mono:style=bold:size=10
-URxvt*.transparent: true
-URxvt*.shading: 20
