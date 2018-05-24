@@ -2,6 +2,7 @@ source ~/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle git
+
 if [[ `uname` == 'Darwin' ]]; then
     antigen bundle osx
 fi
@@ -30,10 +31,10 @@ if [[ ${USE_COMPOSER} == true ]]; then
     export PATH="$PATH:$HOME/.composer/vendor/bin"
 fi
 
-if [[ ${USE_GPG_SSH} == true ]]; then
+if [[ ${USE_GPG_SSH} == true && $UID != 0 ]]; then
     export GPG_TTY=$(tty)
     gpg-connect-agent /bye
-    export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 fi
 
 if [[ ${USE_VIM} == true ]]; then
