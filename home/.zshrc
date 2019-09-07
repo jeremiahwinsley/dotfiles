@@ -19,6 +19,7 @@ alias fgrep="fgrep --color"
 
 alias ap="ansible-playbook -i hosts"
 alias apb="ansible-playbook -i hosts --ask-become-pass"
+alias drb="docker-compose up --build --force-recreate -d"
 
 export GOPATH=$HOME/go
 export PATH="$PATH:$HOME/bin"
@@ -28,7 +29,11 @@ if [ -f $HOME/.localrc ]; then
 fi
 
 if [[ ${USE_COMPOSER} == true ]]; then
-    export PATH="$PATH:$HOME/.composer/vendor/bin"
+    if [[ -d "$HOME/.composer" ]]; then
+        export PATH="$PATH:$HOME/.composer/vendor/bin"
+    elif [[ -d "$HOME/.config/composer" ]]; then
+        export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+    fi
 fi
 
 if [[ ${USE_GPG_SSH} == true && $UID != 0 ]]; then
